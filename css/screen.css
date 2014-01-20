@@ -220,7 +220,7 @@ nav ul {
 section #homepage {
   height: 34em;
   text-align: center;
-  background: #009798 url(../img/grandparents_bg.jpg) no-repeat center -100px;
+  background: #009798 url(../images/grandparents_bg.jpg) no-repeat center -100px;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -289,10 +289,10 @@ section #homepage {
     margin: 10px auto;
     border-radius: 4px;
     -webkit-border-radius: 4px; }
-  /* line 302, ../sass/screen.scss */
-  .hero-unit :hover {
-    text-decoration: none;
-    background: #10C7B9; }
+    /* line 301, ../sass/screen.scss */
+    .hero-unit a :hover {
+      text-decoration: none;
+      background: #10C7B9; }
 
 /* FORM */
 /* line 310, ../sass/screen.scss */
@@ -330,7 +330,7 @@ section #homepage {
 /* About Section */
 /* line 346, ../sass/screen.scss */
 section #about {
-  background: #f8f8f8 url(../img/about_bg.png);
+  background: #f8f8f8 url(../images/about_bg.png);
   border-top: 10px solid #F0F0F0;
   padding: 40px 0 100px 0;
   text-shadow: none;

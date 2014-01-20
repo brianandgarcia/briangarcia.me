@@ -67,29 +67,27 @@ $(document).ready(function(){
 // header scroll function
 function headerScroll() {
 	if ($(this).scrollTop() > 5){  
-		$('header').addClass("collapsed");
+		$('.banner').addClass("collapsed");
 	} 
 	else{
-   		$('header').removeClass("collapsed");
+   		$('.banner').removeClass("collapsed");
 	}
 
 	if ($(this).scrollTop() > 700){
-		$('header').addClass("change");
+		$('.banner').addClass("change");
 	}
 	else{
-		$('header').removeClass("change");
+		$('.banner').removeClass("change");
 	}
 
   //wonder if toggle class would work
   if($(this).scrollTop() > 480){
     $('#home_nav').removeClass("active");
     $('#about_nav').addClass("active");
-    $('#avocado').fadeIn(2000);
   }
   else{
     $('#about_nav').removeClass("active");
     $('#home_nav').addClass("active");
-     $('#avocado').fadeOut(1000);
   }
 }
 
