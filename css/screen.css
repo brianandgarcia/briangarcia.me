@@ -15,18 +15,16 @@ body {
   font-size: 18px;
   line-height: 28px;
   color: #333;
-  background: #222222; }
-
-/* line 22, ../sass/screen.scss */
-a {
-  color: #0088cc;
-  text-decoration: none; }
-
-/* line 28, ../sass/screen.scss */
-a:hover,
-a:focus {
-  color: #005580;
-  text-decoration: underline; }
+  background: #222; }
+  /* line 21, ../sass/screen.scss */
+  body a {
+    color: #0088cc;
+    text-decoration: none; }
+    /* line 25, ../sass/screen.scss */
+    body a a:hover,
+    body a a:focus {
+      color: #005580;
+      text-decoration: underline; }
 
 /* line 33, ../sass/screen.scss */
 ::selection {
@@ -91,8 +89,13 @@ h3 {
   text-shadow: 0 4px 0 rgba(0, 0, 0, 0.1); }
 
 /* Homepage Section */
-/* line 91, ../sass/screen.scss */
-header.banner {
+/* line 92, ../sass/screen.scss */
+header h2 {
+  font-weight: 400;
+  color: #000;
+  color: rgba(0, 0, 0, 0.4); }
+/* line 97, ../sass/screen.scss */
+header .banner {
   background: #2c2c2c;
   border-bottom: solid 10px rgba(0, 0, 0, 0.2);
   padding: 35px 0;
@@ -107,66 +110,70 @@ header.banner {
   -moz-transition: background-color 0.2s ease-in, padding 1s ease-in-out;
   -o-transition: background-color 0.2s ease-in, padding 1s ease-in-out;
   transition: background-color 0.2s ease-in, padding 1s ease-in-out; }
-
-/* line 108, ../sass/screen.scss */
-header.collapsed {
+/* line 113, ../sass/screen.scss */
+header .collapsed {
   padding: 10px 0; }
-
-/* line 112, ../sass/screen.scss */
-header.change {
-  background: #C04E4E; }
-
 /* line 116, ../sass/screen.scss */
+header .change {
+  background: #C04E4E; }
+/* line 119, ../sass/screen.scss */
 header .brand {
   float: left;
   width: 450px; }
+  /* line 122, ../sass/screen.scss */
+  header .brand span {
+    font-size: 0.7em;
+    color: rgba(255, 255, 255, 0.4); }
+  /* line 126, ../sass/screen.scss */
+  header .brand a {
+    color: #FFF;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    display: block;
+    margin-top: 10px;
+    text-decoration: none; }
+  /* line 133, ../sass/screen.scss */
+  header .brand img {
+    float: left;
+    margin-right: 10px; }
+  /* line 137, ../sass/screen.scss */
+  header .brand h1 {
+    font-weight: 600; }
+    /* line 139, ../sass/screen.scss */
+    header .brand h1 span {
+      color: #FFF;
+      text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3); }
 
-/* line 121, ../sass/screen.scss */
-.brand span {
-  font-size: 0.7em;
-  color: rgba(255, 255, 255, 0.4); }
-
-/* line 126, ../sass/screen.scss */
-header h2 {
-  font-weight: 400;
-  color: #000;
-  color: rgba(0, 0, 0, 0.4); }
-
-/* line 133, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 nav ul {
   float: right; }
+  /* line 150, ../sass/screen.scss */
+  nav ul li {
+    float: left;
+    padding: 24px 20px; }
+    /* line 153, ../sass/screen.scss */
+    nav ul li :hover {
+      background: rgba(0, 0, 0, 0.7);
+      -webkit-transition: background 3s ease;
+      -moz-transition: background 3s ease;
+      -ms-transition: background 3s ease;
+      -o-transition: background 3s ease;
+      transition: background 3s ease; }
+  /* line 162, ../sass/screen.scss */
+  nav ul > li > a {
+    color: #FFF;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+    font-size: 0.8em; }
+    /* line 166, ../sass/screen.scss */
+    nav ul > li > a :hover {
+      text-decoration: none;
+      color: #FFF;
+      text-shadow: none; }
 
-/* line 137, ../sass/screen.scss */
-nav ul li {
-  float: left;
-  padding: 24px 20px; }
-
-/* line 142, ../sass/screen.scss */
-nav ul li:hover {
-  background: rgba(0, 0, 0, 0.7);
-  -webkit-transition: background 3s ease;
-  -moz-transition: background 3s ease;
-  -ms-transition: background 3s ease;
-  -o-transition: background 3s ease;
-  transition: background 3s ease; }
-
-/* line 151, ../sass/screen.scss */
-nav ul > li > a {
-  color: #FFF;
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
-  font-size: 0.8em; }
-
-/* line 157, ../sass/screen.scss */
-nav ul > li > a:hover {
-  text-decoration: none;
-  color: #FFF;
-  text-shadow: none; }
-
-/* line 163, ../sass/screen.scss */
+/* line 175, ../sass/screen.scss */
 .nav .active {
   font-weight: bold; }
 
-/* line 167, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 #nav ul {
   margin: 0;
   padding: 0;
@@ -174,7 +181,7 @@ nav ul > li > a:hover {
   display: block;
   list-style: none; }
 
-/* line 175, ../sass/screen.scss */
+/* line 187, ../sass/screen.scss */
 .js #nav {
   clip: rect(0 0 0 0);
   max-height: 0;
@@ -183,11 +190,11 @@ nav ul > li > a:hover {
   overflow: hidden;
   zoom: 1; }
 
-/* line 184, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 #nav.opened {
   max-height: 9999px; }
 
-/* line 188, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 #nav-toggle {
   color: #FFF;
   text-shadow: 0 2px 0 rgba(255, 255, 255, 0.1);
@@ -195,34 +202,38 @@ nav ul > li > a:hover {
   right: 0;
   top: 0; }
 
-/* line 196, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 #social_menu {
   display: none;
   position: absolute;
   top: 101px;
   background: #222; }
+  /* line 213, ../sass/screen.scss */
+  #social_menu .active {
+    display: block; }
+  /* line 216, ../sass/screen.scss */
+  #social_menu li a {
+    color: #FFF;
+    display: inline-block; }
 
-/* line 203, ../sass/screen.scss */
-#social_menu.active {
-  display: block; }
-
-/* line 207, ../sass/screen.scss */
-#social_menu li a {
-  color: #FFF;
-  display: inline-block; }
-
-/* line 213, ../sass/screen.scss */
+/* line 225, ../sass/screen.scss */
 section #homepage {
   height: 34em;
   text-align: center;
-  background: #009798 url(../images/grandparents_bg.jpg) no-repeat center -100px;
+  background: #009798 url(../img/grandparents_bg.jpg) no-repeat center -100px;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed; }
+  /* line 234, ../sass/screen.scss */
+  section #homepage h2 {
+    color: #FFF;
+    text-shadow: 0 2px 0 #000;
+    font-family: "brandon-grotesque";
+    text-transform: uppercase; }
 
-/* line 224, ../sass/screen.scss */
+/* line 243, ../sass/screen.scss */
 .overlay {
   background: rgba(0, 134, 134, 0.75);
   height: 100%;
@@ -232,50 +243,18 @@ section #homepage {
   -o-transition: background 2s ease-in;
   transition: background 2s ease-in; }
 
-/* line 234, ../sass/screen.scss */
-#homepage h2 {
-  color: #FFF;
-  text-shadow: 0 2px 0 #000;
-  font-family: "brandon-grotesque";
-  text-transform: uppercase; }
-
-/* line 241, ../sass/screen.scss */
-.show_large images {
+/* line 254, ../sass/screen.scss */
+.show_large img {
   height: 400px; }
 
-/* line 246, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 .memo {
   text-align: center;
   width: 100%;
   margin-top: 140px;
   color: #FFF; }
 
-/* line 253, ../sass/screen.scss */
-.brand a {
-  color: #FFF;
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
-  display: block;
-  margin-top: 10px; }
-
-/* line 260, ../sass/screen.scss */
-.brand images {
-  float: left;
-  margin-right: 10px; }
-
-/* line 265, ../sass/screen.scss */
-.brand h1 {
-  font-weight: 600; }
-
-/* line 268, ../sass/screen.scss */
-.brand a {
-  text-decoration: none; }
-
-/* line 269, ../sass/screen.scss */
-.brand h1 span {
-  color: #FFF;
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3); }
-
-/* line 275, ../sass/screen.scss */
+/* line 267, ../sass/screen.scss */
 .hero-unit {
   padding-top: 365px;
   color: inherit;
@@ -290,114 +269,100 @@ section #homepage {
   font-weight: 400;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   -moz-text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
-
-/* line 291, ../sass/screen.scss */
-.hero-unit span {
-  font-size: 3em;
-  line-height: 1.1em; }
-
-/* line 295, ../sass/screen.scss */
-.hero-unit strong {
-  font-weight: bold;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #FFF; }
-
-/* line 302, ../sass/screen.scss */
-.hero-unit a {
-  display: block;
-  max-width: 240px;
-  background: #005152;
-  color: #FFF;
-  padding: 10px 20px;
-  margin: 10px auto;
-  border-radius: 4px;
-  -webkit-border-radius: 4px; }
-
-/* line 312, ../sass/screen.scss */
-.hero-unit a:hover {
-  text-decoration: none;
-  background: #10C7B9; }
+  /* line 282, ../sass/screen.scss */
+  .hero-unit span {
+    font-size: 3em;
+    line-height: 1.1em; }
+  /* line 286, ../sass/screen.scss */
+  .hero-unit strong {
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFF; }
+  /* line 292, ../sass/screen.scss */
+  .hero-unit a {
+    display: block;
+    max-width: 240px;
+    background: #005152;
+    color: #FFF;
+    padding: 10px 20px;
+    margin: 10px auto;
+    border-radius: 4px;
+    -webkit-border-radius: 4px; }
+  /* line 302, ../sass/screen.scss */
+  .hero-unit :hover {
+    text-decoration: none;
+    background: #10C7B9; }
 
 /* FORM */
-/* line 318, ../sass/screen.scss */
+/* line 310, ../sass/screen.scss */
 #contact_form {
   display: none;
   max-width: 800px;
   text-align: center; }
-
-/* line 323, ../sass/screen.scss */
-#contact_form h2 {
-  margin-bottom: 20px;
-  text-align: center;
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
-
-/* line 329, ../sass/screen.scss */
-#contact_form input, #contact_form textarea {
-  font-size: 1.2em;
-  color: white;
-  border-radius: 5px;
-  border: none;
-  background-color: #FFF;
-  width: 500px;
-  padding: 5px;
-  -webkit-box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2); }
-
-/* line 341, ../sass/screen.scss */
-#contact_form label {
-  display: block;
-  text-align: left; }
-
-/* line 346, ../sass/screen.scss */
-#contact_form input[type="submit"] {
-  width: auto;
-  padding: 10px;
-  background: #525353;
-  color: #FFF; }
+  /* line 315, ../sass/screen.scss */
+  #contact_form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
+  /* line 320, ../sass/screen.scss */
+  #contact_form input, #contact_form textarea {
+    font-size: 1.2em;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    background-color: #FFF;
+    width: 500px;
+    padding: 5px;
+    -webkit-box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2); }
+  /* line 331, ../sass/screen.scss */
+  #contact_form label {
+    display: block;
+    text-align: left; }
+  /* line 335, ../sass/screen.scss */
+  #contact_form input[type="submit"] {
+    width: auto;
+    padding: 10px;
+    background: #525353;
+    color: #FFF; }
 
 /* About Section */
-/* line 355, ../sass/screen.scss */
+/* line 346, ../sass/screen.scss */
 section #about {
-  background: #f8f8f8 url(../images/about_bg.png);
+  background: #f8f8f8 url(../img/about_bg.png);
   border-top: 10px solid #F0F0F0;
   padding: 40px 0 100px 0;
   text-shadow: none;
   position: relative;
   z-index: 1; }
-
-/* line 364, ../sass/screen.scss */
-section #about images {
-  float: left;
-  padding-right: 25px; }
-
-/* line 370, ../sass/screen.scss */
-#about p {
-  padding-bottom: 10px; }
-
-/* line 374, ../sass/screen.scss */
-#about h2 {
-  color: #222;
-  text-shadow: 0 2px 0 #E6E6E6; }
-
-/* line 379, ../sass/screen.scss */
-#about .btn {
-  background: #C04E4E;
-  padding: 14px;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  color: #FFF;
-  display: inline-block;
-  margin: 20px 0; }
-
-/* line 389, ../sass/screen.scss */
+  /* line 354, ../sass/screen.scss */
+  section #about img {
+    float: left;
+    padding-right: 25px; }
+  /* line 358, ../sass/screen.scss */
+  section #about p {
+    padding-bottom: 10px; }
+  /* line 361, ../sass/screen.scss */
+  section #about h2 {
+    color: #222;
+    text-shadow: 0 2px 0 #E6E6E6; }
+  /* line 365, ../sass/screen.scss */
+  section #about .btn {
+    background: #C04E4E;
+    padding: 14px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #FFF;
+    display: inline-block;
+    margin: 20px 0; }
+/* line 375, ../sass/screen.scss */
 section article {
   color: #505050;
   border-bottom: 1px solid #DDD;
   padding: 20px 2px; }
-
-/* line 395, ../sass/screen.scss */
-article:hover {
+/* line 380, ../sass/screen.scss */
+section :hover {
   color: #038BD8;
   -webkit-transition: background-color  1s ease-in-out, color 1s ease;
   -moz-transition: background-color 1s ease-in-out, color 1s ease;
@@ -405,7 +370,7 @@ article:hover {
   transition: background-color 1s ease-in-out, color 1s ease; }
 
 /* Work Section */
-/* line 404, ../sass/screen.scss */
+/* line 392, ../sass/screen.scss */
 section #work {
   background: #222;
   padding: 30px 0 100px 0;
@@ -413,30 +378,27 @@ section #work {
   font-weight: 200;
   position: relative;
   z-index: 1; }
+  /* line 399, ../sass/screen.scss */
+  section #work h2 {
+    color: #FFF;
+    text-shadow: 0 2px 0 #000;
+    margin-bottom: 20px; }
+  /* line 404, ../sass/screen.scss */
+  section #work dd {
+    text-align: center; }
 
-/* line 413, ../sass/screen.scss */
-#work h2 {
-  color: #FFF;
-  text-shadow: 0 2px 0 #000;
-  margin-bottom: 20px; }
-
-/* line 419, ../sass/screen.scss */
+/* line 411, ../sass/screen.scss */
 .accordion > dt > span {
   display: inline-block;
   padding: 10px;
   width: 100%; }
-
-/* line 425, ../sass/screen.scss */
+/* line 416, ../sass/screen.scss */
 .accordion dt {
   background: #000;
   margin-bottom: 5px;
   cursor: pointer; }
 
-/* line 431, ../sass/screen.scss */
-#work dd {
-  text-align: center; }
-
-/* line 435, ../sass/screen.scss */
+/* line 424, ../sass/screen.scss */
 .box {
   border: 5px solid #000;
   cursor: pointer;
@@ -446,33 +408,30 @@ section #work {
   position: relative;
   overflow: hidden;
   width: 300px; }
+  /* line 433, ../sass/screen.scss */
+  .box img {
+    position: absolute;
+    left: 0; }
+  /* line 437, ../sass/screen.scss */
+  .box :hover .caption {
+    display: block;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1em;
+    bottom: 0;
+    text-align: center; }
 
-/* line 446, ../sass/screen.scss */
-.box images {
-  position: absolute;
-  left: 0; }
-
-/* line 451, ../sass/screen.scss */
+/* line 447, ../sass/screen.scss */
 .caption {
   display: none;
   color: #FFF; }
-
-/* line 456, ../sass/screen.scss */
-.box:hover .caption {
-  display: block;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 1em;
-  bottom: 0;
-  text-align: center; }
-
-/* line 465, ../sass/screen.scss */
-.caption p {
-  font-size: 0.8em;
-  line-height: 1.2em; }
+  /* line 450, ../sass/screen.scss */
+  .caption p {
+    font-size: 0.8em;
+    line-height: 1.2em; }
 
 /* Footer */
-/* line 471, ../sass/screen.scss */
+/* line 457, ../sass/screen.scss */
 footer {
   background: #07abbf;
   color: #FFF;
