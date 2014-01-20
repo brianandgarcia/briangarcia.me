@@ -3,4 +3,477 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+@import "reset.css";
+@import "normalize.css";
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+  margin: 0;
+  font-family: "ff-tisa-web-pro", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: #333;
+  background: #222222;
+}
+
+a {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #005580;
+  text-decoration: underline;
+}
+
+::selection {
+	background: #04a9be; /* Safari */
+	color: #FFF;
+}
+::-moz-selection {
+	background: #04a9be; /* Firefox */
+	color: #FFF;
+}
+
+/* CLEARFIX HACK */
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+} 
+.group:after {
+    clear: both;
+}
+.group {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+h1 {
+ font-size: 2.1em;
+ line-height: 0.7em;
+}
+h2 {
+ font-size: 2em;
+ line-height: 1em;
+}
+
+h3 {
+	font-size: 0.8em;
+	line-height: 1em;
+}
+/* GENERIC PAGE STYLING */
+
+.container {
+	margin: 0 auto;
+	position: relative;
+	padding: 0 4%;
+	width: 80%;
+	max-width: 1200px;
+}
+
+.page h1 {
+	color: #ff7373;
+	text-shadow: 0 4px 0 rgba(0,0,0,0.1);
+}
+
+
+/* Homepage Section */
+
+header.banner {
+	background: #2c2c2c;
+	border-bottom: solid 10px rgba(0,0,0,0.2);
+	padding: 35px 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	z-index: 8000;
+	font-family: "brandon-grotesque", sans-serif;
+	text-transform: uppercase;
+	-webkit-transition: background-color  0.2s ease-in, padding 1s ease-in-out;
+	-moz-transition: background-color 0.2s ease-in, padding 1s ease-in-out;
+	-o-transition: background-color 0.2s ease-in, padding 1s ease-in-out;
+	transition: background-color 0.2s ease-in, padding 1s ease-in-out;
+}
+
+header.collapsed {
+	padding: 10px 0;
+}
+
+header.change {
+	background: #C04E4E;
+}
+
+header .brand {
+	float: left;
+	width: 450px;
+}
+
+	.brand span {
+		font-size: 0.7em;
+		color: rgba(255,255,255,0.4);
+	}
+
+header h2 {
+	font-weight: 400;
+	color: #000;
+	color: rgba(0,0,0,0.4)
+}
+
+
+nav ul {
+	float: right;
+}
+
+	nav ul li {
+		float: left;
+		padding: 24px 20px;
+	} 
+
+	nav ul li:hover {
+		background: rgba(0,0,0,0.7);
+		-webkit-transition: background 3s ease;
+		-moz-transition: background 3s ease;
+        -ms-transition: background 3s ease;
+        -o-transition: background 3s ease;
+		transition: background 3s ease;
+	}
+
+		nav ul > li > a {
+			color: #FFF;
+			text-shadow: 0 2px 0 rgba(0,0,0,0.3);
+			font-size: 0.8em;
+		}
+
+		nav ul > li > a:hover {
+			text-decoration: none;
+			color: #FFF;
+			text-shadow: none;
+		}
+
+.nav .active {
+	font-weight: bold;
+}
+
+#nav ul {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: block;
+	list-style: none;
+}
+
+.js #nav {
+	clip: rect(0 0 0 0);
+	max-height: 0;
+	position: absolute;
+	display: block;
+	overflow: hidden;
+	zoom: 1;
+}
+
+#nav.opened {
+	max-height: 9999px;
+}
+
+#nav-toggle {
+	color: #FFF;
+	text-shadow: 0 2px 0 rgba(255,255,255,0.1);
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+#social_menu {
+	display: none;
+	position: absolute;
+	top: 101px;
+	background: #222;
+}
+
+	#social_menu.active {
+		display: block;
+	}
+
+	#social_menu li a {
+		color: #FFF;
+		display: inline-block;
+	}
+
+
+section #homepage {
+	height: 34em;
+	text-align: center;
+	background: #009798 url(../images/grandparents_bg.jpg) no-repeat center -100px;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.overlay {
+	background: rgba(0,134,134,0.75);
+	height: 100%;
+	-webkit-transition: background 2s ease-in;
+	-moz-transition: background 2s ease-in;
+	-ms-transition: background 2s ease-in;
+	-o-transition: background 2s ease-in;
+	transition: background 2s ease-in;
+}
+
+	#homepage h2 {
+		color: #FFF;
+		text-shadow: 0 2px 0 #000;
+		font-family: "brandon-grotesque";
+		text-transform: uppercase;
+	}
+
+.show_large images {
+	height: 400px;
+}
+
+
+.memo {
+	text-align: center;
+	width: 100%;
+	margin-top: 140px;
+	color: #FFF;
+}
+
+.brand a {
+	color: #FFF;
+	text-shadow: 0 2px 0 rgba(0,0,0,0.2);
+	display: block;
+	margin-top: 10px;
+}
+
+.brand images {
+	float: left;
+	margin-right: 10px;
+}
+
+.brand h1 {
+	font-weight: 600;
+}
+	.brand a { text-decoration: none }
+	.brand h1 span {
+		color: #FFF;
+		text-shadow: 0 2px 0 rgba(0,0,0,0.3);
+	}
+
+
+.hero-unit {
+	padding-top: 365px;
+	color: inherit;
+	position: relative;
+	z-index: 5;
+	width: 100%;
+	height: 215px;
+	overflow: hidden;
+	text-align: center;
+	color: #BDDDDF;
+	font-family: "brandon-grotesque";
+	font-weight: 400;
+	text-shadow: 0 0 10px rgba(0,0,0,0.2);
+	-moz-text-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.hero-unit span {
+	font-size: 3em;
+	line-height: 1.1em;
+}
+	.hero-unit strong {
+		font-weight: bold;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #FFF;
+	}
+
+	.hero-unit a {
+		display: block;
+		max-width: 240px;
+		background: #005152;
+		color: #FFF;
+		padding: 10px 20px;
+		margin: 10px auto;
+		border-radius: 4px;
+		-webkit-border-radius: 4px;
+	}
+	.hero-unit a:hover {
+		text-decoration: none;
+		background: #10C7B9;
+	}
+
+/* FORM */
+#contact_form {
+	display: none;
+	max-width: 800px;
+	text-align: center;
+}
+	#contact_form h2 {
+		margin-bottom: 20px;
+		text-align: center;
+		text-shadow: 0 2px 0 rgba(0,0,0,0.1);
+	}
+
+#contact_form input, #contact_form textarea {
+	font-size: 1.2em;
+	color: rgba(255,255,255,1);
+	border-radius: 5px;
+	border: none;
+	background-color: #FFF;
+	width: 500px;
+	padding: 5px;
+	-webkit-box-shadow:  2px 2px 0px 0px rgba(0, 0, 0, 0.2);
+    box-shadow:  2px 2px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+#contact_form label {
+	display: block;
+	text-align: left;
+}
+
+#contact_form input[type="submit"] {
+	width: auto;
+	padding: 10px;
+	background: #525353;
+	color: #FFF;
+}
+
+/* About Section */
+
+section #about {
+	background: #F8F8F8 url(../images/about_bg.png);
+	border-top: 10px solid #F0F0F0;
+	padding: 40px 0 100px 0;
+	text-shadow: none;
+	position: relative;
+	z-index: 1;
+}
+
+	section #about images {
+		float: left;
+		padding-right: 25px;
+	}
+
+
+	#about p {
+		padding-bottom: 10px;
+	}
+
+	#about h2 {
+		color: #222;
+		text-shadow: 0 2px 0 #E6E6E6;
+	}
+
+	#about .btn {
+		background: #C04E4E;
+		padding: 14px;
+		border-radius: 4px;
+		-webkit-border-radius: 4px;
+		color: #FFF;
+		display: inline-block;
+		margin: 20px 0;
+	}
+
+section article {
+	color: #505050;
+	border-bottom: 1px solid #DDD;
+	padding: 20px 2px;
+}
+
+article:hover {
+	color: #038BD8;
+	-webkit-transition: background-color  1s ease-in-out, color 1s ease;
+	-moz-transition: background-color 1s ease-in-out, color 1s ease;
+	-o-transition: background-color 1s ease-in-out, color 1s ease;
+	transition: background-color 1s ease-in-out, color 1s ease;
+}
+
+/* Work Section */
+section #work {
+	background: #222;
+	padding: 30px 0 100px 0;
+	color: #ECE9E9;
+	font-weight: 200;
+	position: relative;
+	z-index: 1;
+}
+
+#work h2 {
+	color: #FFF;
+	text-shadow: 0 2px 0 #000;
+	margin-bottom: 20px;
+}
+
+.accordion > dt > span {
+	display: inline-block;
+	padding: 10px;
+	width: 100%;
+}
+
+	.accordion dt {
+		background: #000;
+		margin-bottom: 5px;
+		cursor: pointer;
+	}
+
+#work dd {
+	text-align: center;
+}
+
+.box {
+    border: 5px solid #000;
+    cursor: pointer;
+    height: 200px;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+}
+
+.box images {
+    position: absolute;
+    left: 0;
+}
+
+.caption {
+	display: none;
+	color: #FFF;
+}
+
+.box:hover .caption {
+	display: block;
+	position: absolute;
+	background: rgba(0,0,0,0.8);
+	padding: 1em;
+	bottom: 0;
+	text-align: center;
+}
+
+	.caption p {
+		font-size: 0.8em;
+		line-height: 1.2em;
+	}
+
+/* Footer */
+footer {
+	background: #07abbf;
+	color: #FFF;
+	padding: 35px;
+}
+
+
+@import "responsive.css";
+
