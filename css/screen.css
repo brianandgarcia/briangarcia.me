@@ -185,33 +185,33 @@ header .change {
   background: #C04E4E; }
 
 /* line 192, ../sass/screen.scss */
-nav ul {
+.nav {
   float: right;
   /* Start of Media Query */ }
   @media screen and (max-width: 1024px) {
     /* line 192, ../sass/screen.scss */
-    nav ul {
+    .nav {
       float: none;
       width: 100%;
       margin: auto;
       clear: both;
       text-align: center; } }
   /* line 204, ../sass/screen.scss */
-  nav ul li {
+  .nav li {
     float: left;
     padding: 24px 20px;
     /* Start of Media Queries */ }
     @media screen and (max-width: 1024px) {
       /* line 204, ../sass/screen.scss */
-      nav ul li {
+      .nav li {
         float: none;
         display: inline-block; } }
     @media screen and (max-width: 500px) {
       /* line 204, ../sass/screen.scss */
-      nav ul li {
+      .nav li {
         float: none; } }
     /* line 217, ../sass/screen.scss */
-    nav ul li:hover {
+    .nav li:hover {
       background: rgba(0, 0, 0, 0.7);
       -webkit-transition: background 3s ease;
       -moz-transition: background 3s ease;
@@ -219,12 +219,12 @@ nav ul {
       -o-transition: background 3s ease;
       transition: background 3s ease; }
   /* line 226, ../sass/screen.scss */
-  nav ul > li > a {
+  .nav > li > a {
     color: #FFF;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
     font-size: 0.8em; }
     /* line 230, ../sass/screen.scss */
-    nav ul > li > a:hover {
+    .nav > li > a:hover {
       text-decoration: none;
       color: #FFF;
       text-shadow: none; }
@@ -611,4 +611,23 @@ section #work {
 footer {
   background: #07abbf;
   color: #FFF;
-  padding: 35px; }
+  padding: 35px;
+  overflow: auto; }
+  /* line 647, ../sass/screen.scss */
+  footer p {
+    float: left;
+    padding-top: 18px; }
+
+/* Social bar for the footer */
+/* line 656, ../sass/screen.scss */
+nav .social_bar {
+  float: right; }
+  /* line 658, ../sass/screen.scss */
+  nav .social_bar li {
+    display: inline-block;
+    text-align: left;
+    padding: 0 10px; }
+    /* line 662, ../sass/screen.scss */
+    nav .social_bar li a {
+      color: #363636;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
