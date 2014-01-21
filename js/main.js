@@ -7,7 +7,7 @@ $(document).ready(function(){
 	$(".hero-unit").hide().delay(2000).fadeIn(1000);
 
 	//nav active
-	$("nav ul li a").click(navActive);
+	$(".nav li a").click(navActive);
 
 	//header scroll
 	$(window).scroll(headerScroll);
