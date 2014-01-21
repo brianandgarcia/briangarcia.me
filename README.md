@@ -11,3 +11,5 @@ TO DO LIST:
 5.) Remove avatar photo, replace with something more friendly ;) ?
 
 6.) Navigation "WORK" is broken. 
+
+7.) Clean and optimize JS code.
