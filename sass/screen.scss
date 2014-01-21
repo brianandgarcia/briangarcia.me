@@ -21,8 +21,8 @@ body {
 	a {
 	  color: #0088cc;
 	  text-decoration: none;
-		a:hover,
-	    a:focus {
+		&:hover,
+	    &:focus {
   	  		color: #005580;
         	text-decoration: underline;
      	}
@@ -39,7 +39,12 @@ body {
 	color: #FFF;
 }
 
-/* CLEARFIX HACK */
+/* RESPONSIVE IMAGES */
+img {
+	max-width: 100%;
+}
+
+/* CLEARFIX HACK, GROUP IS MORE SEMANTIC */
 .group:before,
 .group:after {
     content: "";
@@ -58,12 +63,12 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 h1 {
- font-size: 2.1em;
- line-height: 0.7em;
+	font-size: 2.1em;
+ 	line-height: 0.7em;
 }
 h2 {
- font-size: 2em;
- line-height: 1em;
+	font-size: 2em;
+	line-height: 1em;
 }
 
 h3 {
@@ -78,6 +83,13 @@ h3 {
 	padding: 0 4%;
 	width: 80%;
 	max-width: 1200px;
+
+	/* START OF MEDIA QUERIES */
+	@media screen and (max-width: 480px) {
+		text-align: center;
+	}
+	/* END OF MEDIA QUERIES */
+
 }
 
 .page h1 {
@@ -109,6 +121,64 @@ header {
 		-moz-transition: background-color 0.2s ease-in, padding 1s ease-in-out;
 		-o-transition: background-color 0.2s ease-in, padding 1s ease-in-out;
 		transition: background-color 0.2s ease-in, padding 1s ease-in-out;
+
+		/* START OF MEDIA QUERIES */
+		@media screen and (max-width: 1024px) {
+			padding: 10px 0;
+		}
+		@media screen and (max-width: 500px) {
+			position: static;
+			.container {
+				width: 90%;
+			}
+		}
+		/* END OF MEDIA QUERIES */
+
+		.brand {
+			float: left;
+			width: 450px;
+
+			/* START OF MEDIA QUERIES */
+			@media screen and (max-width: 1024px) {
+				float: none;
+				margin: auto;
+			}
+			@media screen and (max-width: 500px) {
+				text-align: center;
+				width: 100%;
+				margin-top: 2em;
+				img {
+					display: none;
+				}
+				> span {
+					font-size: 0.6em;
+				}
+			}
+			/* END OF MEDIA QUERIES */
+
+			span {
+				font-size: 0.7em;
+				color: rgba(255,255,255,0.4);
+			}
+			a {
+				color: #FFF;
+				text-shadow: 0 2px 0 rgba(0,0,0,0.2);
+				display: block;
+				margin-top: 10px;
+				text-decoration: none;
+			}
+			img {
+				float: left;
+				margin-right: 10px;
+			}
+			h1 {
+				font-weight: 600;
+				span {
+					color: #FFF;
+					text-shadow: 0 2px 0 rgba(0,0,0,0.3);
+				}
+			}
+		}
 	}
 	.collapsed {
 		padding: 10px 0;
@@ -116,41 +186,35 @@ header {
 	.change {
 		background: #C04E4E;
 	}
-	.brand {
-		float: left;
-		width: 450px;
-		span {
-			font-size: 0.7em;
-			color: rgba(255,255,255,0.4);
-		}
-		a {
-			color: #FFF;
-			text-shadow: 0 2px 0 rgba(0,0,0,0.2);
-			display: block;
-			margin-top: 10px;
-			text-decoration: none;
-		}
-		img {
-			float: left;
-			margin-right: 10px;
-		}
-		h1 {
-			font-weight: 600;
-			span {
-				color: #FFF;
-				text-shadow: 0 2px 0 rgba(0,0,0,0.3);
-			}
-		}
-	}
 }
 
 
 nav ul {
 	float: right;
+
+	/* Start of Media Query */
+	@media screen and (max-width: 1024px) {
+		float: none;
+		width: 100%;
+		margin: auto;
+		clear: both;
+		text-align: center;
+	}
+
 	li {
 		float: left;
 		padding: 24px 20px;
-		:hover {
+
+		/* Start of Media Queries */
+		@media screen and (max-width: 1024px) {
+			float: none;
+			display: inline-block;
+		}
+		@media screen and (max-width: 500px) {
+			float: none;
+		}
+
+		&:hover {
 			background: rgba(0,0,0,0.7);
 			-webkit-transition: background 3s ease;
 			-moz-transition: background 3s ease;
@@ -163,7 +227,7 @@ nav ul {
 				color: #FFF;
 				text-shadow: 0 2px 0 rgba(0,0,0,0.3);
 				font-size: 0.8em;
-				:hover {
+				&:hover {
 					text-decoration: none;
 					color: #FFF;
 					text-shadow: none;
@@ -184,13 +248,27 @@ nav ul {
 	list-style: none;
 }
 
-.js #nav {
-	clip: rect(0 0 0 0);
-	max-height: 0;
-	position: absolute;
-	display: block;
-	overflow: hidden;
-	zoom: 1;
+.js {
+
+	/* START OF MEDIA QUERIES */
+	@media screen and (min-width: 600px) {
+	  #nav {
+		position: relative;
+	  }
+	  #nav.closed {
+		max-height: none;
+	  }
+	}
+	/* END OF MEDIA QUERIES */
+
+	#nav {
+		clip: rect(0 0 0 0);
+		max-height: 0;
+		position: absolute;
+		display: block;
+		overflow: hidden;
+		zoom: 1;
+	}
 }
 
 #nav.opened {
@@ -203,6 +281,11 @@ nav ul {
 	position: absolute;
 	right: 0;
 	top: 0;
+
+	@media screen and (min-width: 600px) {
+		display: none;
+	}
+
 }
 
 #social_menu {
@@ -219,8 +302,6 @@ nav ul {
 	}
 }
 
-
-
 section {
 	#homepage {
 		height: 34em;
@@ -231,6 +312,28 @@ section {
 		-o-background-size: cover;
 		background-size: cover;
 		background-attachment: fixed;
+
+		/* START OF MEDIA QUERIES */
+		@media screen and (min-width: 1600px) {
+			height: 38em;
+			background-position: center -180px;
+		}
+		@media screen and (max-width: 1024px) {
+			height: 33em;
+			background-attachment: scroll;
+			background-position: center 0;
+			.hero-unit {
+				height: 185px;
+				span {
+					font-size: 2.2em;
+				}
+			}
+		}
+		@media screen and (max-width: 575px) {
+			height: 26em;
+		}
+		/* END OF MEDIA QUERIES */
+
 		h2 {
 				color: #FFF;
 				text-shadow: 0 2px 0 #000;
@@ -279,6 +382,18 @@ section {
 	text-shadow: 0 0 10px rgba(0,0,0,0.2);
 	-moz-text-shadow: 0 0 10px rgba(0,0,0,0.2);
 
+	/* START OF MEDIA QUERIES */
+	@media screen and (max-width: 575px) {
+		padding-top: 13em;
+	}
+	@media screen and (max-width: 500px) {
+		padding-top: 8em;
+		span {
+			font-size: 1.8em;
+		}
+	}
+	/* END OF MEDIA QUERIES */
+
 	span {
 		font-size: 3em;
 		line-height: 1.1em;
@@ -298,7 +413,7 @@ section {
 		margin: 10px auto;
 		border-radius: 4px;
 		-webkit-border-radius: 4px;
-		:hover {
+		&:hover {
 			text-decoration: none;
 			background: #10C7B9;
 		}
@@ -351,6 +466,12 @@ section {
 		position: relative;
 		z-index: 1;
 
+		/* START OF MEDIA QUERIES */
+		@media screen and (max-width: 500px) {
+			text-align: center;
+		}
+		/* END OF MEDIA QUERIES */
+
 		img {
 			float: left;
 			padding-right: 25px;
@@ -376,13 +497,25 @@ section {
 		color: #505050;
 		border-bottom: 1px solid #DDD;
 		padding: 20px 2px;
-	}
-	:hover {
-		color: #038BD8;
-		-webkit-transition: background-color  1s ease-in-out, color 1s ease;
-		-moz-transition: background-color 1s ease-in-out, color 1s ease;
-		-o-transition: background-color 1s ease-in-out, color 1s ease;
-		transition: background-color 1s ease-in-out, color 1s ease;
+		&:hover {
+			color: #038BD8;
+			-webkit-transition: background-color  1s ease-in-out, color 1s ease;
+			-moz-transition: background-color 1s ease-in-out, color 1s ease;
+			-o-transition: background-color 1s ease-in-out, color 1s ease;
+			transition: background-color 1s ease-in-out, color 1s ease;
+		}
+
+		/* START OF MEDIA QUERIES */
+		@media screen and (max-width: 500px) {
+			text-align: left;
+		}
+		@media screen and (max-width: 480px) {
+			p {
+				text-align: justify;
+			}
+		}
+		/* END OF MEDIA QUERIES */
+
 	}
 }
 
@@ -396,6 +529,13 @@ section {
 		font-weight: 200;
 		position: relative;
 		z-index: 1;
+
+		/* START OF MEDIA QUERIES */
+		@media screen and (max-width: 575px) {
+			text-align: center;
+		}
+		/* END OF MEDIA QUERIES */
+
 		h2 {
 			color: #FFF;
 			text-shadow: 0 2px 0 #000;
@@ -405,6 +545,20 @@ section {
 			text-align: center;
 		}
 	}
+	.thumb {
+		@media screen and (max-width: 800px) {
+			width: 46%;
+			margin-right: 4%;
+		}
+		@media screen and (max-width: 575px) {
+			float: none;
+			width: 100%;
+			margin-right: 0;
+			&:hover {
+				background: none;
+			}
+		}
+	}
 }
 
 .accordion {
@@ -412,6 +566,13 @@ section {
 	display: inline-block;
 	padding: 10px;
 	width: 100%;
+
+	/* START OF MEDIA QUERIES */
+	@media screen and (max-width: 500px) {
+		font-size: 1em;
+	}
+	/* END OF MEDIA QUERIES */
+
 	}
 	dt {
 		background: #000;
@@ -430,6 +591,18 @@ section {
     position: relative;
     overflow: hidden;
     width: 300px;
+
+    /* START OF MEDIA QUERIES */
+	@media screen and (max-width: 800px) {
+		float: none;
+		margin: 10px auto;
+	}
+	@media screen and (max-width: 500px) {
+		width: 200px;
+		height: 130px;
+	}
+	/* END OF MEDIA QUERIES */
+
 	img {
 	    position: absolute;
 	    left: 0;
@@ -447,6 +620,18 @@ section {
 .caption {
 	display: none;
 	color: #FFF;
+
+	/* START OF MEDIA QUERIES */
+	@media screen and (max-width: 500px) {
+		display: block;
+		position: absolute;
+		background: rgba(0,0,0,0.8);
+		padding: 1em;
+		bottom: 0;
+		text-align: center;
+	}
+	/* END OF MEDIA QUERIES */
+
 	p {
 		font-size: 0.8em;
 		line-height: 1.2em;
@@ -460,6 +645,4 @@ footer {
 	padding: 35px;
 }
 
-
-@import "responsive.css";
 
