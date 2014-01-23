@@ -12,7 +12,7 @@ $(document).ready(function(){
 	//header scroll
 	$(window).scroll(headerScroll);
 
-  $('.hero-unit').MySlider(8000);
+  //$('.hero-unit').MySlider(8000);
 
   var allPanels = $('.accordion > dd').hide();
   $('.accordion > dd').first().show();
