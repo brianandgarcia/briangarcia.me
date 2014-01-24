@@ -364,7 +364,7 @@ section #homepage {
   position: relative;
   z-index: 5;
   width: 100%;
-  height: 10em;
+  height: 13em;
   overflow: hidden;
   text-align: center;
   color: #BDDDDF;
@@ -411,19 +411,24 @@ section #homepage {
       text-decoration: none;
       background: #10C7B9;
       color: #FFF; }
+  /* line 428, ../sass/screen.scss */
+  .hero-unit p {
+    width: 75%;
+    margin: auto;
+    padding-top: 1.8em; }
 
 /* FORM */
-/* line 432, ../sass/screen.scss */
+/* line 437, ../sass/screen.scss */
 #contact_form {
   display: none;
   max-width: 800px;
   text-align: center; }
-  /* line 437, ../sass/screen.scss */
+  /* line 442, ../sass/screen.scss */
   #contact_form h2 {
     margin-bottom: 20px;
     text-align: center;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1); }
-  /* line 442, ../sass/screen.scss */
+  /* line 447, ../sass/screen.scss */
   #contact_form input, #contact_form textarea {
     font-size: 1.2em;
     color: white;
@@ -434,11 +439,11 @@ section #homepage {
     padding: 5px;
     -webkit-box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2); }
-  /* line 453, ../sass/screen.scss */
+  /* line 458, ../sass/screen.scss */
   #contact_form label {
     display: block;
     text-align: left; }
-  /* line 457, ../sass/screen.scss */
+  /* line 462, ../sass/screen.scss */
   #contact_form input[type="submit"] {
     width: auto;
     padding: 10px;
@@ -446,7 +451,7 @@ section #homepage {
     color: #FFF; }
 
 /* About Section */
-/* line 468, ../sass/screen.scss */
+/* line 473, ../sass/screen.scss */
 section #about {
   background: #f8f8f8 url(../images/about_bg.png);
   border-top: 10px solid #F0F0F0;
@@ -457,21 +462,21 @@ section #about {
   /* START OF MEDIA QUERIES */
   /* END OF MEDIA QUERIES */ }
   @media screen and (max-width: 500px) {
-    /* line 468, ../sass/screen.scss */
+    /* line 473, ../sass/screen.scss */
     section #about {
       text-align: center; } }
-  /* line 482, ../sass/screen.scss */
+  /* line 487, ../sass/screen.scss */
   section #about img {
     float: left;
     padding-right: 25px; }
-  /* line 486, ../sass/screen.scss */
+  /* line 491, ../sass/screen.scss */
   section #about p {
     padding-bottom: 10px; }
-  /* line 489, ../sass/screen.scss */
+  /* line 494, ../sass/screen.scss */
   section #about h2 {
     color: #222;
     text-shadow: 0 2px 0 #E6E6E6; }
-  /* line 493, ../sass/screen.scss */
+  /* line 498, ../sass/screen.scss */
   section #about .btn {
     background: #C04E4E;
     padding: 14px;
@@ -480,14 +485,14 @@ section #about {
     color: #FFF;
     display: inline-block;
     margin: 20px 0; }
-/* line 503, ../sass/screen.scss */
+/* line 508, ../sass/screen.scss */
 section article {
   color: #505050;
   border-bottom: 1px solid #DDD;
   padding: 20px 2px;
   /* START OF MEDIA QUERIES */
   /* END OF MEDIA QUERIES */ }
-  /* line 507, ../sass/screen.scss */
+  /* line 512, ../sass/screen.scss */
   section article:hover {
     color: #038BD8;
     -webkit-transition: background-color  1s ease-in-out, color 1s ease;
@@ -495,16 +500,16 @@ section article {
     -o-transition: background-color 1s ease-in-out, color 1s ease;
     transition: background-color 1s ease-in-out, color 1s ease; }
   @media screen and (max-width: 500px) {
-    /* line 503, ../sass/screen.scss */
+    /* line 508, ../sass/screen.scss */
     section article {
       text-align: left; } }
   @media screen and (max-width: 480px) {
-    /* line 520, ../sass/screen.scss */
+    /* line 525, ../sass/screen.scss */
     section article p {
       text-align: justify; } }
 
 /* Work Section */
-/* line 532, ../sass/screen.scss */
+/* line 537, ../sass/screen.scss */
 section #work {
   background: #222;
   padding: 30px 0 100px 0;
@@ -515,33 +520,33 @@ section #work {
   /* START OF MEDIA QUERIES */
   /* END OF MEDIA QUERIES */ }
   @media screen and (max-width: 575px) {
-    /* line 532, ../sass/screen.scss */
+    /* line 537, ../sass/screen.scss */
     section #work {
       text-align: center; } }
-  /* line 546, ../sass/screen.scss */
+  /* line 551, ../sass/screen.scss */
   section #work h2 {
     color: #FFF;
     text-shadow: 0 2px 0 #000;
     margin-bottom: 20px; }
-  /* line 551, ../sass/screen.scss */
+  /* line 556, ../sass/screen.scss */
   section #work dd {
     text-align: center; }
 @media screen and (max-width: 800px) {
-  /* line 555, ../sass/screen.scss */
+  /* line 560, ../sass/screen.scss */
   section .thumb {
     width: 46%;
     margin-right: 4%; } }
 @media screen and (max-width: 575px) {
-  /* line 555, ../sass/screen.scss */
+  /* line 560, ../sass/screen.scss */
   section .thumb {
     float: none;
     width: 100%;
     margin-right: 0; }
-    /* line 564, ../sass/screen.scss */
+    /* line 569, ../sass/screen.scss */
     section .thumb:hover {
       background: none; } }
 
-/* line 572, ../sass/screen.scss */
+/* line 577, ../sass/screen.scss */
 .accordion > dt > span {
   display: inline-block;
   padding: 10px;
@@ -549,16 +554,16 @@ section #work {
   /* START OF MEDIA QUERIES */
   /* END OF MEDIA QUERIES */ }
   @media screen and (max-width: 500px) {
-    /* line 572, ../sass/screen.scss */
+    /* line 577, ../sass/screen.scss */
     .accordion > dt > span {
       font-size: 1em; } }
-/* line 584, ../sass/screen.scss */
+/* line 589, ../sass/screen.scss */
 .accordion dt {
   background: #000;
   margin-bottom: 5px;
   cursor: pointer; }
 
-/* line 592, ../sass/screen.scss */
+/* line 597, ../sass/screen.scss */
 .box {
   border: 5px solid #000;
   cursor: pointer;
@@ -571,20 +576,20 @@ section #work {
   /* START OF MEDIA QUERIES */
   /* END OF MEDIA QUERIES */ }
   @media screen and (max-width: 800px) {
-    /* line 592, ../sass/screen.scss */
+    /* line 597, ../sass/screen.scss */
     .box {
       float: none;
       margin: 10px auto; } }
   @media screen and (max-width: 500px) {
-    /* line 592, ../sass/screen.scss */
+    /* line 597, ../sass/screen.scss */
     .box {
       width: 200px;
       height: 130px; } }
-  /* line 613, ../sass/screen.scss */
+  /* line 618, ../sass/screen.scss */
   .box img {
     position: absolute;
     left: 0; }
-  /* line 617, ../sass/screen.scss */
+  /* line 622, ../sass/screen.scss */
   .box :hover .caption {
     display: block;
     position: absolute;
@@ -593,14 +598,14 @@ section #work {
     bottom: 0;
     text-align: center; }
 
-/* line 627, ../sass/screen.scss */
+/* line 632, ../sass/screen.scss */
 .caption {
   display: none;
   color: #FFF;
   /* START OF MEDIA QUERIES */
   /* END OF MEDIA QUERIES */ }
   @media screen and (max-width: 500px) {
-    /* line 627, ../sass/screen.scss */
+    /* line 632, ../sass/screen.scss */
     .caption {
       display: block;
       position: absolute;
@@ -608,47 +613,47 @@ section #work {
       padding: 1em;
       bottom: 0;
       text-align: center; } }
-  /* line 642, ../sass/screen.scss */
+  /* line 647, ../sass/screen.scss */
   .caption p {
     font-size: 0.8em;
     line-height: 1.2em; }
 
 /* Footer */
-/* line 649, ../sass/screen.scss */
+/* line 654, ../sass/screen.scss */
 footer {
   background: #07abbf;
   color: #FFF;
   padding: 35px;
   overflow: auto; }
-  /* line 654, ../sass/screen.scss */
+  /* line 659, ../sass/screen.scss */
   footer p {
     float: left;
     padding-top: 18px; }
   @media screen and (max-width: 850px) {
-    /* line 649, ../sass/screen.scss */
+    /* line 654, ../sass/screen.scss */
     footer {
       text-align: center; }
-      /* line 660, ../sass/screen.scss */
+      /* line 665, ../sass/screen.scss */
       footer p {
         float: none; } }
 
 /* Social bar for the footer */
-/* line 669, ../sass/screen.scss */
+/* line 674, ../sass/screen.scss */
 nav .social_bar {
   float: right; }
-  /* line 671, ../sass/screen.scss */
+  /* line 676, ../sass/screen.scss */
   nav .social_bar li {
     display: inline-block;
     text-align: left;
     padding: 0 10px; }
-    /* line 675, ../sass/screen.scss */
+    /* line 680, ../sass/screen.scss */
     nav .social_bar li a {
       color: #51C8D8; }
-      /* line 677, ../sass/screen.scss */
+      /* line 682, ../sass/screen.scss */
       nav .social_bar li a:hover {
         color: #FFF; }
   @media screen and (max-width: 850px) {
-    /* line 669, ../sass/screen.scss */
+    /* line 674, ../sass/screen.scss */
     nav .social_bar {
       float: none;
       clear: both; } }
