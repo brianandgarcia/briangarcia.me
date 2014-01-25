@@ -5,6 +5,7 @@
 
 @import "reset.css";
 @import "normalize.css";
+@import "variables";
 
 /* ==========================================================================
    Author's custom styles
@@ -85,10 +86,10 @@ h3 {
 	max-width: 1200px;
 
 	/* START OF MEDIA QUERIES */
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: $oldcomputers) {
 		width: 90%;
 	}
-	@media screen and (max-width: 480px) {
+	@media screen and (max-width: $mobile) {
 		text-align: center;
 	}
 	/* END OF MEDIA QUERIES */
@@ -116,7 +117,7 @@ header {
 		right: 0;
 		width: 100%;
 		z-index: 8000;
-		font-family: "brandon-grotesque", sans-serif;
+		font-family: $font;
 		text-transform: uppercase;
 		-webkit-transition: background-color  0.2s ease-in, padding 1s ease-in-out;
 		-moz-transition: background-color 0.2s ease-in, padding 1s ease-in-out;
@@ -124,7 +125,7 @@ header {
 		transition: background-color 0.2s ease-in, padding 1s ease-in-out;
 
 		/* START OF MEDIA QUERIES */
-		@media screen and (max-width: 1024px) {
+		@media screen and (max-width: $oldcomputers) {
 			padding: 10px 0;
 		}
 		@media screen and (max-width: 500px) {
@@ -140,7 +141,7 @@ header {
 			width: 350px;
 
 			/* START OF MEDIA QUERIES */
-			@media screen and (max-width: 1024px) {
+			@media screen and (max-width: $oldcomputers) {
 				float: none;
 				margin: auto;
 			}
@@ -197,7 +198,7 @@ header {
 	float: right;
 
 	/* Start of Media Query */
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: $oldcomputers) {
 		float: none;
 		width: 100%;
 		margin: auto;
@@ -210,7 +211,7 @@ header {
 		padding: 24px 20px;
 
 		/* Start of Media Queries */
-		@media screen and (max-width: 1024px) {
+		@media screen and (max-width: $oldcomputers) {
 			float: none;
 			display: inline-block;
 		}
@@ -325,7 +326,7 @@ section {
 		@media screen and (max-width: 1280px) {
 			background-position: center 0;
 		}
-		@media screen and (max-width: 1024px) {
+		@media screen and (max-width: $oldcomputers) {
 			height: 33em;
 			background-attachment: scroll;
 			.hero-unit {
@@ -342,7 +343,7 @@ section {
 		h2 {
 				color: #FFF;
 				text-shadow: 0 2px 0 #000;
-				font-family: "brandon-grotesque";
+				font-family: $font;
 				text-transform: uppercase;
 			}
 	}
@@ -351,11 +352,11 @@ section {
 .overlay {
 	background: rgba(0,134,134,0.9);
 	height: 100%;
-	-webkit-transition: background 2s ease-in;
-	-moz-transition: background 2s ease-in;
-	-ms-transition: background 2s ease-in;
-	-o-transition: background 2s ease-in;
-	transition: background 2s ease-in;
+	-webkit-transition: $transitions;
+	-moz-transition: $transitions;
+	-ms-transition: $transitions;
+	-o-transition: $transitions;
+	transition: $transitions;
 }
 
 
@@ -382,7 +383,7 @@ section {
 	overflow: hidden;
 	text-align: center;
 	color: #BDDDDF;
-	font-family: "brandon-grotesque";
+	font-family: $font;
 	font-weight: 400;
 	text-shadow: 0 0 10px rgba(0,0,0,0.2);
 	-moz-text-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -521,7 +522,7 @@ section {
 		@media screen and (max-width: 500px) {
 			text-align: left;
 		}
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: $mobile) {
 			p {
 				text-align: justify;
 			}
