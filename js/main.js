@@ -12,7 +12,6 @@ $(document).ready(function(){
 	//header scroll
 	$(window).scroll(headerScroll);
 
-
   var allPanels = $('.accordion > dd').hide();
   
   $('.accordion > dd').first().show();

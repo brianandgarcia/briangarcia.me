@@ -63,7 +63,7 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 h1 {
-	font-size: 2.1em;
+	font-size: 1.8em;
  	line-height: 0.7em;
 }
 h2 {
@@ -85,6 +85,9 @@ h3 {
 	max-width: 1200px;
 
 	/* START OF MEDIA QUERIES */
+	@media screen and (max-width: 1024px) {
+		width: 90%;
+	}
 	@media screen and (max-width: 480px) {
 		text-align: center;
 	}
@@ -107,8 +110,6 @@ header {
 		color: rgba(0,0,0,0.4)
 	}
 	.banner {
-		background: #2c2c2c;
-		border-bottom: solid 10px rgba(0,0,0,0.2);
 		padding: 35px 0;
 		position: fixed;
 		top: 0;
@@ -136,7 +137,7 @@ header {
 
 		.brand {
 			float: left;
-			width: 450px;
+			width: 350px;
 
 			/* START OF MEDIA QUERIES */
 			@media screen and (max-width: 1024px) {
@@ -158,7 +159,7 @@ header {
 
 			span {
 				font-size: 0.7em;
-				color: rgba(255,255,255,0.4);
+				color: rgba(255,255,255,0.6);
 			}
 			a {
 				color: #FFF;
@@ -182,9 +183,12 @@ header {
 	}
 	.collapsed {
 		padding: 10px 0;
+		background: #2e2e2e;
+		border-bottom: solid 8px rgba(14,14,14,0.8);
 	}
 	.change {
 		background: #C04E4E;
+		border-bottom: solid 8px rgba(0,0,0,0.2);
 	}
 }
 
@@ -318,12 +322,13 @@ section {
 			height: 38em;
 			background-position: center -180px;
 		}
+		@media screen and (max-width: 1280px) {
+			background-position: center 0;
+		}
 		@media screen and (max-width: 1024px) {
 			height: 33em;
 			background-attachment: scroll;
-			background-position: center 0;
 			.hero-unit {
-				height: 185px;
 				span {
 					font-size: 2.2em;
 				}
@@ -344,7 +349,7 @@ section {
 }
 
 .overlay {
-	background: rgba(0,134,134,0.75);
+	background: rgba(0,134,134,0.9);
 	height: 100%;
 	-webkit-transition: background 2s ease-in;
 	-moz-transition: background 2s ease-in;
@@ -368,12 +373,12 @@ section {
 
 
 .hero-unit {
-	padding-top: 365px;
+	padding-top: 13em;
 	color: inherit;
 	position: relative;
 	z-index: 5;
 	width: 100%;
-	height: 215px;
+	height: 13em;
 	overflow: hidden;
 	text-align: center;
 	color: #BDDDDF;
@@ -384,7 +389,8 @@ section {
 
 	/* START OF MEDIA QUERIES */
 	@media screen and (max-width: 575px) {
-		padding-top: 13em;
+		padding-top: 11em;
+		height: 13em;
 	}
 	@media screen and (max-width: 500px) {
 		padding-top: 8em;
@@ -416,7 +422,13 @@ section {
 		&:hover {
 			text-decoration: none;
 			background: #10C7B9;
+			color: #FFF;
 		}
+	}
+	p {
+		width: 75%;
+		margin: auto;
+		padding-top: 1.8em;
 	}
 }
 
@@ -648,6 +660,12 @@ footer {
 		float: left;
 		padding-top: 18px;
 	}
+	@media screen and (max-width: 850px) {
+		text-align: center;
+		p {
+			float: none;
+		}
+	}
 }
 
 /* Social bar for the footer */
@@ -660,9 +678,15 @@ nav {
 			text-align: left;
 			padding: 0 10px;
 			a {
-				color: #363636;
-				text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+				color: #51C8D8;
+				&:hover {
+					color: #FFF;
+				}
 			}
+		}
+		@media screen and (max-width: 850px) {
+			float: none;
+			clear: both;
 		}
 	}
 }
