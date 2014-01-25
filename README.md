@@ -13,3 +13,5 @@ TO DO LIST:
 6.) Navigation "WORK" is broken. 
 
 7.) Clean and optimize JS code.
+
+8.) MINIFY everything, eventually.
