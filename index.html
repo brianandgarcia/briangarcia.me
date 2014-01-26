@@ -10,13 +10,13 @@
         <script type="text/javascript" src="//use.typekit.net/uhi0jnd.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-        <link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-        <link href="font-awesome/css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
-
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
         <script src="js/flowtype.js"></script>
         <script src="js/responsive_nav.js"></script>
         <script src="js/main.js"></script>
+
+        <link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+        <link href="font-awesome/css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
         <link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen" />
         <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js"></script>
@@ -274,41 +274,5 @@
                     </div>
                 </footer>
             </section>
-    <script>
-        var navigation = responsiveNav("#nav");
-        $('body').flowtype({
-            minimum   : 500,
-            maximum   : 2000,
-            minFont   : 14,
-            maxFont   : 22,
-            fontRatio : 30,
-            lineRatio : 1.45
-        });
-
-        $(document).ready(function() {
-            $('.fancybox').fancybox();
-            /* This is basic - uses default settings */
-            
-            $("a#single_image").fancybox();
-            
-            /* Using custom settings */
-            
-            $("a#inline").fancybox({
-                'hideOnContentClick': true
-            });
-
-            /* Apply fancybox to multiple items */
-            
-            $("a.group").fancybox({
-                'transitionIn'  :   'elastic',
-                'transitionOut' :   'elastic',
-                'speedIn'       :   600, 
-                'speedOut'      :   200, 
-                'overlayShow'   :   false
-            });
-        });
-
-    </script>
-
     </body>
 </html>

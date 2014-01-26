@@ -1,10 +1,8 @@
 //Main Processes
 $(document).ready(function(){
 
-  //homepage effects
-  $("#transition").addClass("overlay");
-
-	$(".hero-unit").hide().delay(2000).fadeIn(1000);
+  //run slider
+  var slider = brianSlider();
 
 	//nav active
 	$(".nav li a").click(navActive);
@@ -12,6 +10,7 @@ $(document).ready(function(){
 	//header scroll
 	$(window).scroll(headerScroll);
 
+  // Start of accordion
   var allPanels = $('.accordion > dd').hide();
   
   $('.accordion > dd').first().show();
@@ -33,12 +32,47 @@ $(document).ready(function(){
      $("header").hide().delay(2000).slideDown(400);
   }
 
+  // start of navigation
+  var navigation = responsiveNav("#nav");
+
+  // start of flowtype
+  $('body').flowtype({
+      minimum   : 500,
+      maximum   : 2000,
+      minFont   : 14,
+      maxFont   : 22,
+      fontRatio : 30,
+      lineRatio : 1.45
+  });
+
+  // start of fancybox
+  $('.fancybox').fancybox();
+  /* This is basic - uses default settings */
+  
+  $("a#single_image").fancybox();
+  
+  /* Using custom settings */
+  
+  $("a#inline").fancybox({
+      'hideOnContentClick': true
+  });
+
+  /* Apply fancybox to multiple items */
+  
+  $("a.group").fancybox({
+      'transitionIn'  :   'elastic',
+      'transitionOut' :   'elastic',
+      'speedIn'       :   600, 
+      'speedOut'      :   200, 
+      'overlayShow'   :   false
+  });
+
 
 });
 
 
 // header scroll function
-function headerScroll() {
+var headerScroll = function() {
 	if ($(this).scrollTop() > 5){  
 		$('.banner').addClass("collapsed");
 	} 
@@ -65,7 +99,7 @@ function headerScroll() {
 }
 
 //nav active
-function navActive(e) {
+var navActive = function(e) {
 	e.preventDefault;
 	$(".active").removeClass("active");
 	$(this).addClass("active");
@@ -85,4 +119,42 @@ function navActive(e) {
   
 }
 
+//start of slider 
+
+var brianSlider = function() {
+
+  //step 1: hide hero unit on load for 2000 then fade in
+  $(".hero-unit").hide().delay(2000).fadeIn(1000);
+
+  //homepage effects
+  $("#transition").addClass("overlay");
+
+  //Set the background array
+  var slideBackgrounds = [
+    'images/grandparents_bg.jpg',
+    'images/another_bg.jpg'
+  ];
+
+  //Set the slider array
+  var slideContent = [
+    'This is Content',
+    'This is Content 2'
+  ];
+
+  $("#homepage").css("background", slideBackgrounds[0]);
+  
+
+  var currentSlide = 0;
+
+  var nextSlide = function(){
+    //puts the current background / slide
+    $("#homepage").css("background", slideBackgrounds[currentSlide]);
+
+    //move to the next slide
+    currentSlide = currentSlide +1;
+  }
+
+  //if we wanted a next button
+
+};
 
